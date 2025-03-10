@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+@import '@fontsource/vujahday-script';
+@import '@fontsource/special-elite';
+
+@theme {
+    --font-script: "Vujahday Script", serif;
+    --font-body: "Special Elite", serif;
+    
+    --color-primary: #F1EAD3;
+    --color-secondary: #E6D9A7;
+    --color-tertiary: #545147;
+    --color-accent: #1E5F74;
+}
+
+@layer components {
+    .screen-section {
+        width: 100%;
+        /* height: calc(100vh - 4.5rem); */
+        height: 100lvh;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.h-screen {
+    height: 100lvh;
+}
+.min-h-screen {
+    min-height: 100lvh;
+}
+
+.animate-move-right {
+    animation: move-right 60s linear infinite;
+}
+.animate-move-left {
+    animation: move-left 64s linear infinite;
+}
+
+@keyframes move-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes move-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: var(--color-primary);
+}

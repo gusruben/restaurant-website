@@ -1,0 +1,15 @@
+{
+	"useTabs": true,
+	"trailingComma": "es5",
+	"arrowParens": "avoid",
+	"printWidth": 120,
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	]
+}
